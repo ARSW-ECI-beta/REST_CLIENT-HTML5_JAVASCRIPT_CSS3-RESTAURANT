@@ -1,0 +1,50 @@
+<html>
+    
+    <head>
+        <title>Client</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+        <script src="model.js"></script>
+        <script src="controller.js"></script>
+        
+    </head>
+    
+    <body>
+        <div id="titulo">
+            TITULO
+            
+        </div>
+        
+        <div id="menuizq">
+            <select id="ordenes" onchange="cambiarOrdenActual(this.value)">                
+            </select>  
+            <button onclick="actualizarOrdenesDisponibles()">Actualizar</button>
+            
+            <button onclick="doPut().then(function(){alert('done!')})">PUT</button>
+        </div>
+        
+        <div id="contenido">
+
+            <h1 id="tablenum">Sin mesa seleccionada</h1>
+            <table id="tablaplatos" style="width:100%">
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>                
+              </tr>
+              
+            </table>
+            
+            <div id="resumenCuenta">
+                Total:
+            </div>
+        </div>
+        
+        <div id="menuder">
+            <ul id="platos">
+                
+            </ul>
+        </div>
+    </body>
+
+</html>
